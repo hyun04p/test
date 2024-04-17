@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <div id="content"></div>
+  </head>
+  <body>
+    <script>
+
+      function setContent(content) {
+        document.getElementById('content').innerText = content 
+      }
+
+      fetch('https://hyun04p.github.io/test/test.csv')
+      .then(d => d.text())
+      .then(t => setContent(t))
+    </script>
+  </body>
+</html>
